@@ -15,7 +15,8 @@ module.exports = {
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
         "comma-dangle": ["error", "never"],
-        "no-console": "warn"
+        "no-console": "warn",
+        "no-unused-vars": "warn",
     },
     "globals": {
         "__dirname": true
