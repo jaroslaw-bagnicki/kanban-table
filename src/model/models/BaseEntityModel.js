@@ -1,25 +1,25 @@
 export class BaseEntity {
-  constuctor(id, name, createDateStr) {
-    this.id = id;
-    this.name = name;
-    this.createDate = new Date(createDateStr);
+  constructor({ id, name, createDate }) {
+    this._id = id;
+    this._name = name;
+    this._createDate = new Date(createDate);
   }
 
   get id() {
-    return this.id;
+    return this._id;
   }
 
   get name() {
-    return this.name;
+    return this._name;
   }
 
   set name(value) {
-    this.name = value;
+    this._name = value;
     // TODO update view
     // TODO update storage
   }
 
   get createDate() {
-    return this.createDate;
+    return this._createDate;
   }
 }

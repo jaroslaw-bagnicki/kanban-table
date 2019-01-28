@@ -1,15 +1,15 @@
 import { BaseEntity } from './BaseEntityModel';
 import colors from '../../shared/colorsEnum';
 
-export class Table extends BaseEntity {
-  constructor(id, name, createDateStr, content, color = 'white') {
-    super(id, name, createDateStr);
-    this.content = content;
-    this.color = color;
+export class Card extends BaseEntity {
+  constructor({ content = '', color = 'white', ...rest }) {
+    super(rest);
+    this._content = content;
+    this._color = color;
   }
 
   get content() {
-    return this.content;
+    return this._content;
   }
 
   set content(value) {
@@ -19,11 +19,11 @@ export class Table extends BaseEntity {
   }
 
   get color() {
-    return this.color;
+    return this._color;
   }
 
   set color(value) {
-    this.color = value;
+    this._color = value;
     // TODO:
     // - update view
     // - upddate storage

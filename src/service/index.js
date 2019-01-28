@@ -95,16 +95,18 @@ async function removeDataFromStorage() {
 }
 
 // Tests of storage
-async function testStorage() {
-  console.log(await setDataToStorage(mockBoard));
-  console.log(await getDataFromStorage());
-  console.log(await removeDataFromStorage());
-}
+// async function testStorage() {
+//   console.log(await setDataToStorage(mockBoard));
+//   console.log(await getDataFromStorage());
+//   console.log(await removeDataFromStorage());
+// }
 // testStorage();
+// console.log(mockBoard);
 
 export default {
   getData: getDataFromStorage,
   setData: setDataToStorage,
-  removeData: removeDataFromStorage
+  removeData: removeDataFromStorage,
+  mockBoard
 };
 

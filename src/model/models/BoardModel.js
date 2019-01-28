@@ -1,24 +1,24 @@
 import { BaseEntity } from './BaseEntityModel';
 
 export class Board extends BaseEntity {
-  constructor(id, name, createDateStr, description = '', columns) {
-    super(id, name, createDateStr);
-    this.desciption = description;
-    this.columns = columns;
+  constructor({ description = '', columns = [], ...rest }) {
+    super(rest);
+    this._desciption = description;
+    this._columns = columns;
   }
 
   get desciption() {
-    return this.desciption;
+    return this._desciption;
   }
 
   set desciption(value) {
-    this.desciption = value;
+    this._desciption = value;
     // TODO update view
     // TODO update storage
   }
 
   get columns() {
-    return this.columns;
+    return this._columns;
   }
 
   insertColumns(columnObj, prevColumnId) {
