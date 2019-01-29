@@ -3,16 +3,16 @@ import { BaseEntity } from './BaseEntityModel';
 export class Board extends BaseEntity {
   constructor({ description = '', columns = [], ...rest }) {
     super(rest);
-    this._desciption = description;
+    this._description = description;
     this._columns = columns;
   }
 
-  get desciption() {
-    return this._desciption;
+  get description() {
+    return this._description;
   }
 
-  set desciption(value) {
-    this._desciption = value;
+  set description(value) {
+    this._description = value;
     // TODO update view
     // TODO update storage
   }
