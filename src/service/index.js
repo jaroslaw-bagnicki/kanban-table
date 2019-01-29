@@ -1,6 +1,5 @@
 import storage from 'localforage';
-
-const STORAGE_KEY = 'kanban-board-demo';
+import { STORAGE_KEY } from '../shared/config';
 
 async function getDataFromStorage() {
   try {

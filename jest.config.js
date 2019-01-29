@@ -15,5 +15,6 @@ module.exports = {
   rootDir: "src",
   testEnvironment: "node",
   testRegex: ".test.js$",
+  setupFiles: ["jest-localstorage-mock"],
   setupFilesAfterEnv: ["jest-chain"]
 };

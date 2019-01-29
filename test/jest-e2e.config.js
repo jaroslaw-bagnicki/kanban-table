@@ -14,5 +14,7 @@ module.exports = {
   },
   rootDir: ".",
   testEnvironment: "node",
-  testRegex: ".e2e-test.js$"
+  testRegex: ".e2e-test.js$",
+  setupFiles: ["jest-localstorage-mock"],
+  setupFilesAfterEnv: ["jest-chain"]
 };

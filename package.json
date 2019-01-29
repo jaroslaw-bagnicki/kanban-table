@@ -9,7 +9,8 @@
     "start": "webpack-dev-server --open",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:e2e": "jest --config ./test/jest-e2e.config.js"
+    "test:e2e": "jest --config ./test/jest-e2e.config.js",
+    "test:e2e:watch": "jest --config ./test/jest-e2e.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.0.0",
     "jest-chain": "^1.1.2",
+    "jest-localstorage-mock": "^2.4.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -54,6 +56,14 @@
         "@babel/preset-env",
         {
           "modules": "commonjs"
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
         }
       ]
     ]
