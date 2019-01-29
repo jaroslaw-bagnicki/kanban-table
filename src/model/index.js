@@ -1,1 +1,1 @@
-export { serializeBoard, deserializeBoard } from './Serializer';
+export { default } from './Store';
