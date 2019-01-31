@@ -1,5 +1,6 @@
 import dataService from '../service';
-import { initBoard, getBoard } from '../model';
+import { initBoard } from '../model';
+import { APP_CONTAINER_SELECTOR } from '../shared/config';
 
 let board;
 
@@ -7,7 +8,6 @@ export async function startApp() {
   console.log('App started');
   const loadedData = await dataService.getData();
   if (loadedData === null) {
-    console.log('No saved data found!');
     // TODO Ask user for init data
     const userData = {
       name: 'New Boad',
@@ -17,9 +17,7 @@ export async function startApp() {
     };
     board = initBoard(userData);
   } else {
-    console.log('Data loaded from storage!');
     board = initBoard(loadedData);
   }
-
-  
+  document.querySelector(APP_CONTAINER_SELECTOR).appendChild(board);
 }
